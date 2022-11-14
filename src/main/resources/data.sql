@@ -4,27 +4,6 @@ codigo INT AUTO_INCREMENT,
 nombre VARCHAR(100),
 PRIMARY KEY (codigo));
 
-insert into piezas (nombre) values ('Rubber');
-insert into piezas (nombre) values ('Rubber');
-insert into piezas (nombre) values ('Plexiglass');
-insert into piezas (nombre) values ('Glass');
-insert into piezas (nombre) values ('Glass');
-insert into piezas (nombre) values ('Stone');
-insert into piezas (nombre) values ('Plastic');
-insert into piezas (nombre) values ('Stone');
-insert into piezas (nombre) values ('Plexiglass');
-insert into piezas (nombre) values ('Aluminum');
-insert into piezas (nombre) values ('Plastic');
-insert into piezas (nombre) values ('Steel');
-insert into piezas (nombre) values ('Vinyl');
-insert into piezas (nombre) values ('Steel');
-insert into piezas (nombre) values ('Steel');
-insert into piezas (nombre) values ('Wood');
-insert into piezas (nombre) values ('Stone');
-insert into piezas (nombre) values ('Vinyl');
-insert into piezas (nombre) values ('Aluminum');
-insert into piezas (nombre) values ('Brass');
-
 drop table if exists proveedores;
 CREATE TABLE proveedores (
 id CHAR (4),
