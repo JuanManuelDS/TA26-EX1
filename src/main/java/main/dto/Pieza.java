@@ -2,6 +2,7 @@ package main.dto;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -26,8 +27,7 @@ public class Pieza {
 	@Column
 	private String nombre;
 	
-	@OneToMany
-	@JoinColumn(name="id")
+	@OneToMany(mappedBy = "pieza", cascade = CascadeType.ALL)
 	private List<Suministra> suministra;
 
 	public Pieza() {
@@ -50,7 +50,7 @@ public class Pieza {
 	}
 
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Suministra")
+	@OneToMany(fetch = FetchType.LAZY)
 	public List<Suministra> getSuministra() {
 		return suministra;
 	}
